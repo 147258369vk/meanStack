@@ -1,0 +1,25 @@
+<mat-card>
+  <h1>Template Driven Form</h1>
+
+  <form #userform="ngForm" (submit)="getValues(userform)">
+    <mat-form-field>
+      <input type="text" matInput name="username" placeholder="Your Name" [(ngModel)]="users.username">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <input type="email" matInput name="email" placeholder="Your Email" [(ngModel)]="users.email">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input type="password" matInput name="password" placeholder="Your Password" [(ngModel)]="users.password">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input type="password" matInput name="cpassword" placeholder="confirm Password" [(ngModel)]="users.cpassword">
+      </mat-form-field>
+      <br>
+      <button type="submit" mat-raised-button color="accent">Submit</button>
+  </form>
+
+</mat-card>

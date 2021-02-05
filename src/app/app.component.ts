@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mydev';
+
+  savedPost:any=[];
+
+  onPostCreate(post:any)
+  {
+    this.savedPost.push(post);
+  }
 }

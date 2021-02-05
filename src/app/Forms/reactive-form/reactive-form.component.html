@@ -1,0 +1,23 @@
+<mat-card>
+  <h1>Reactive Driven Form</h1>
+  <form [formGroup]="userForm" (ngSubmit)="onAdding()">
+    <mat-form-field>
+      <input matInput type="text" placeholder="name" formControlName="username">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <input type="email" matInput placeholder="Email" formControlName="useremail">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Confirm Password" formControlName="cpassword">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary">Submit</button>
+  </form>
+</mat-card>
