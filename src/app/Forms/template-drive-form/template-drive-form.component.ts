@@ -11,16 +11,11 @@ export class TemplateDriveFormComponent {
 
   constructor() { }
 
-  users={
-    username:'',
-    email:'',
-    password:'',
-    cpassword:''
-  }
+ users:any=[];
 
   getValues(f:NgForm)
   {
-    console.log(f.value)
+   alert("Success \n\n " + JSON.stringify(f.value));
   }
 
 }

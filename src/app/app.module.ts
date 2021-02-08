@@ -20,6 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { TemplateDriveFormComponent } from './Forms/template-drive-form/template-drive-form.component';
 import { ReactiveFormComponent } from './Forms/reactive-form/reactive-form.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { ReactiveFormComponent } from './Forms/reactive-form/reactive-form.compo
     MatInputModule,
     MatButtonModule,
     MatExpansionModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
