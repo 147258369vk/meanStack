@@ -1,0 +1,5 @@
+to create a model:
+ng g class classname --type=model
+
+to create a service
+ng g service servicename

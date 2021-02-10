@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostCreateComponent } from './post/post-create/post-create.component';
 import { PostListComponent } from './post/post-list/post-list.component';
+import { HeaderComponent } from './header/header.component';
+import { PostComponent } from './post/post/post.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { EditUserComponent } from './user/edit-user/edit-user.component';
 
 //forms Modules
 import { FormsModule } from '@angular/forms';
@@ -22,6 +26,8 @@ import { TemplateDriveFormComponent } from './Forms/template-drive-form/template
 import { ReactiveFormComponent } from './Forms/reactive-form/reactive-form.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 @NgModule({
@@ -30,7 +36,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     PostCreateComponent,
     PostListComponent,
     TemplateDriveFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    HeaderComponent,
+    PostComponent,
+    AddUserComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatExpansionModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

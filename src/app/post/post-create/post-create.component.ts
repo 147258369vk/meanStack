@@ -17,7 +17,7 @@ export class PostCreateComponent {
   onAddMessage()
   {
     const post={title:this.usertitle,message:this.usermessage};
-    console.dir(post);
+    // console.dir(post);
     this.newPost.emit(post);
   }
 
