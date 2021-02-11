@@ -1,1 +1,54 @@
-<p>edit-user works!</p>
+<mat-card>
+  <mat-toolbar>Edit Profile</mat-toolbar>
+  <br><br>
+
+  <form #updateform="ngForm" (ngSubmit)="onUpdateUser(updateform)">
+    <mat-form-field>
+    <input
+    type="text"
+    matInput
+    placeholder="Name"
+    name="uname"
+    ngModel>
+  </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field>
+    <input
+    type="text"
+    matInput
+    placeholder="Email"
+    name="email"
+    ngModel>
+  </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field>
+    <input
+    type="text"
+    matInput
+    placeholder="Contact"
+    name="contact"
+    ngModel>
+  </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field>
+    <input
+    type="text"
+    matInput
+    placeholder="Designation"
+    name="designation"
+    ngModel>
+  </mat-form-field>
+
+    <br><br>
+
+    <button mat-raised-button color="accent" type="submit">Update Profile</button>
+
+
+  </form>
+</mat-card>

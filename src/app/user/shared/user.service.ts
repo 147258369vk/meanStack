@@ -32,4 +32,25 @@ export class UserService {
     return this.newUser.slice();
   }
 
+  //delete selected user
+  DeleteUser(index:number)
+  {
+    this.newUser.splice(index,1);
+    this.userChange.next(this.newUser.slice());
+
+  }
+
+  //display selected record
+  SelectedUser(index:number)
+  {
+    return this.newUser[index];
+  }
+
+    //Update selected User
+
+    UpdateUser(index:number,updatevalues:User)
+    {
+      this.newUser[index]=updatevalues;
+      this.userChange.next(this.newUser.slice());
+    }
 }

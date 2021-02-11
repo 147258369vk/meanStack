@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { User } from '../shared/user.model';
 import { UserService } from '../shared/user.service';
@@ -15,7 +16,8 @@ export class AddUserComponent implements OnInit {
 
   private subscription!:Subscription;
   constructor(
-    private userService:UserService
+    private userService:UserService,
+    private router:Router
   ) { }
 
   ngOnInit(){
@@ -40,5 +42,21 @@ export class AddUserComponent implements OnInit {
     console.log(newUserDetail);
     alert("Data Added succesfully")
 
+  }
+
+  onDeleteUser(index:number)
+  {
+    this.userService.DeleteUser(index);
+    alert('Record is deleted');
+  }
+
+  onEditUser(index:number)
+  {
+    // this.router.navigateByUrl('/edit-user');
+
+    this.router.navigate(['/edit-user'],{queryParams:{id:index}});
+
+
+    // http://localhost:4200/edit-user?id:2
   }
 }
