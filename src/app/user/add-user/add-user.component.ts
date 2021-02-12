@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 import { User } from '../shared/user.model';
 import { UserService } from '../shared/user.service';
 
@@ -17,7 +18,8 @@ export class AddUserComponent implements OnInit {
   private subscription!:Subscription;
   constructor(
     private userService:UserService,
-    private router:Router
+    private router:Router,
+    private authservice:AuthService
   ) { }
 
   ngOnInit(){
@@ -29,6 +31,8 @@ export class AddUserComponent implements OnInit {
     this.subscription=this.userService.userChange.subscribe((user:User[])=>{this.Users=user})
 
     console.log(this.subscription);
+
+    console.log(this.authservice.getUser());
 
 
 

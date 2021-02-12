@@ -28,6 +28,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { UserHeaderComponent } from './user-header/user-header.component';
+import { AdminComponent } from './admin/admin.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
@@ -41,7 +46,12 @@ import { MatIconModule } from '@angular/material/icon';
     HeaderComponent,
     PostComponent,
     AddUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    LoginComponent,
+    LogoutComponent,
+    UserHeaderComponent,
+    AdminComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
